@@ -1,0 +1,2824 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filimo</title>
+    <link rel="shortcut icon" href="./image/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style/connect.css" />
+    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="./style/swipertwo.css" />
+  </head>
+  <body>
+    <header class="fixed z-[100] w-full overflow-hidden">
+      <ul
+        class="mobile flex items-center justify-between p-3 md:hidden lg:hidden"
+      >
+        <div class="flex items-center gap-2">
+          <a href="">
+            <h2
+              class="filimo flex justify-center text-[30px] font-bold text-[#fff200]"
+            >
+              FILIMO
+            </h2>
+          </a>
+
+          <a href="">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path
+                fill="white"
+                d="M19.16 4.84a8 8 0 0 0-12 10.56l-4.4 4.39a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L8.6 16.82a8 8 0 0 0 10.56-12Zm-1.42 9.9a6 6 0 1 1 0-8.48A6 6 0 0 1 17.74 14.74Z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <button id="sidebarToggle" class="rounded0 p-2 text-white">
+          <svg
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M4 6H20M4 12H20M4 18H20"
+              stroke="#ffffff"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
+        <div
+          id="sidebar"
+          class="fixed left-0 top-0 z-[60] h-full w-64 -translate-x-full transform bg-[#000000] opacity-[95%] transition-transform duration-300 ease-in-out"
+        >
+          <div class="p-4">
+            <ul class="mt-3 text-gray-400">
+              <h2
+                class="filimo flex justify-start text-[30px] font-bold text-[#fff200]"
+              >
+                FILIMO
+              </h2>
+
+              <li class="mt-6 flex items-center gap-1">
+                <svg
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  id="Layer_1"
+                  data-name="Layer 1"
+                >
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: none;
+                        stroke: #ffffff;
+                        stroke-miterlimit: 10;
+                        stroke-width: 1.91px;
+                      }
+                    </style>
+                  </defs>
+                  <circle class="cls-1" cx="12.02" cy="12" r="10.52"></circle>
+                  <circle class="cls-1" cx="12.02" cy="6.26" r="1.91"></circle>
+                  <circle class="cls-1" cx="12.02" cy="17.74" r="1.91"></circle>
+                  <circle class="cls-1" cx="12.02" cy="17.74" r="1.91"></circle>
+                  <circle class="cls-1" cx="6.28" cy="12" r="1.91"></circle>
+                  <circle class="cls-1" cx="17.76" cy="12" r="1.91"></circle>
+                  <circle class="cls-1" cx="17.76" cy="12" r="1.91"></circle>
+                  <line
+                    class="cls-1"
+                    x1="23.5"
+                    y1="22.52"
+                    x2="12.02"
+                    y2="22.52"
+                  ></line>
+                  <line
+                    class="cls-1"
+                    x1="11.07"
+                    y1="12"
+                    x2="12.98"
+                    y2="12"
+                  ></line>
+                </svg>
+                <a href="#" class="hover:text-[rgb(255,252,74)]">Movies</a>
+                <ul class="ml-8 hidden text-gray-300">
+                  <li class="mt-4">
+                    <a href="#" class="hover:text-white">Action</a>
+                  </li>
+                  <li class="mt-4">
+                    <a href="#" class="hover:text-white">Drama</a>
+                  </li>
+                  <li class="mt-4">
+                    <a href="#" class="hover:text-white">Comedy</a>
+                  </li>
+                  <li class="mt-4">
+                    <a href="#" class="hover:text-white">Horror</a>
+                  </li>
+                  <li class="mt-4">
+                    <a href="#" class="hover:text-white">Thriller</a>
+                  </li>
+                  <li class="mt-4">
+                    <a href="#" class="hover:text-white">Fantasy</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="mt-4 flex items-center gap-1">
+                <svg
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#ffffff"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 1920 1920"
+                >
+                  <path
+                    d="M960 0c530.193 0 960 429.807 960 960s-429.807 960-960 960S0 1490.193 0 960 429.807 0 960 0Zm0 101.053c-474.384 0-858.947 384.563-858.947 858.947S485.616 1818.947 960 1818.947 1818.947 1434.384 1818.947 960 1434.384 101.053 960 101.053Zm-42.074 626.795c-85.075 39.632-157.432 107.975-229.844 207.898-10.327 14.249-10.744 22.907-.135 30.565 7.458 5.384 11.792 3.662 22.656-7.928 1.453-1.562 1.453-1.562 2.94-3.174 9.391-10.17 16.956-18.8 33.115-37.565 53.392-62.005 79.472-87.526 120.003-110.867 35.075-20.198 65.9 9.485 60.03 47.471-1.647 10.664-4.483 18.534-11.791 35.432-2.907 6.722-4.133 9.646-5.496 13.23-13.173 34.63-24.269 63.518-47.519 123.85l-1.112 2.886c-7.03 18.242-7.03 18.242-14.053 36.48-30.45 79.138-48.927 127.666-67.991 178.988l-1.118 3.008a10180.575 10180.575 0 0 0-10.189 27.469c-21.844 59.238-34.337 97.729-43.838 138.668-1.484 6.37-1.484 6.37-2.988 12.845-5.353 23.158-8.218 38.081-9.82 53.42-2.77 26.522-.543 48.24 7.792 66.493 9.432 20.655 29.697 35.43 52.819 38.786 38.518 5.592 75.683 5.194 107.515-2.048 17.914-4.073 35.638-9.405 53.03-15.942 50.352-18.932 98.861-48.472 145.846-87.52 41.11-34.26 80.008-76 120.788-127.872 3.555-4.492 3.555-4.492 7.098-8.976 12.318-15.707 18.352-25.908 20.605-36.683 2.45-11.698-7.439-23.554-15.343-19.587-3.907 1.96-7.993 6.018-14.22 13.872-4.454 5.715-6.875 8.77-9.298 11.514-9.671 10.95-19.883 22.157-30.947 33.998-18.241 19.513-36.775 38.608-63.656 65.789-13.69 13.844-30.908 25.947-49.42 35.046-29.63 14.559-56.358-3.792-53.148-36.635 2.118-21.681 7.37-44.096 15.224-65.767 17.156-47.367 31.183-85.659 62.216-170.048 13.459-36.6 19.27-52.41 26.528-72.201 21.518-58.652 38.696-105.868 55.04-151.425 20.19-56.275 31.596-98.224 36.877-141.543 3.987-32.673-5.103-63.922-25.834-85.405-22.986-23.816-55.68-34.787-96.399-34.305-45.053.535-97.607 15.256-145.963 37.783Zm308.381-388.422c-80.963-31.5-178.114 22.616-194.382 108.33-11.795 62.124 11.412 115.76 58.78 138.225 93.898 44.531 206.587-26.823 206.592-130.826.005-57.855-24.705-97.718-70.99-115.729Z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+
+                <a href="#" class="hover:text-[rgb(255,252,74)]">About Us</a>
+              </li>
+              <li class="mt-4 flex items-center gap-1">
+                <svg
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10.0284 1.11813C9.69728 1.2952 9.53443 1.61638 9.49957 1.97965C9.48456 2.15538 9.46201 2.32986 9.43136 2.50363C9.3663 2.87248 9.24303 3.3937 9.01205 3.98313C8.5513 5.15891 7.67023 6.58926 5.96985 7.65195C3.57358 9.14956 2.68473 12.5146 3.06456 15.527C3.45234 18.6026 5.20871 21.7903 8.68375 22.9486C9.03 23.0641 9.41163 22.9817 9.67942 22.7337C10.0071 22.4303 10.0238 22.0282 9.94052 21.6223C9.87941 21.3244 9.74999 20.5785 9.74999 19.6875C9.74999 19.3992 9.76332 19.1034 9.79413 18.8068C10.3282 20.031 11.0522 20.9238 11.7758 21.5623C12.8522 22.5121 13.8694 22.8574 14.1722 22.9466C14.402 23.0143 14.6462 23.0185 14.8712 22.9284C17.5283 21.8656 19.2011 20.4232 20.1356 18.7742C21.068 17.1288 21.1993 15.3939 20.9907 13.8648C20.7833 12.3436 20.2354 10.9849 19.7537 10.0215C19.3894 9.29292 19.0534 8.77091 18.8992 8.54242C18.7101 8.26241 18.4637 8.04626 18.1128 8.00636C17.8332 7.97456 17.5531 8.06207 17.3413 8.24739L15.7763 9.61686C15.9107 7.44482 15.1466 5.61996 14.1982 4.24472C13.5095 3.24609 12.7237 2.47913 12.1151 1.96354C11.8094 1.70448 11.5443 1.50549 11.3525 1.36923C11.2564 1.30103 11.1784 1.24831 11.1224 1.21142C10.7908 0.99291 10.3931 0.923125 10.0284 1.11813ZM7.76396 20.256C7.75511 20.0744 7.74999 19.8842 7.74999 19.6875C7.75 18.6347 7.89677 17.3059 8.47802 16.0708C8.67271 15.6572 8.91614 15.254 9.21914 14.8753C9.47408 14.5566 9.89709 14.4248 10.2879 14.5423C10.6787 14.6598 10.959 15.003 10.9959 15.4094C11.2221 17.8977 12.2225 19.2892 13.099 20.0626C13.5469 20.4579 13.979 20.7056 14.292 20.8525C15.5 20.9999 17.8849 18.6892 18.3955 17.7882C19.0569 16.6211 19.1756 15.356 19.0091 14.1351C18.8146 12.7092 18.2304 11.3897 17.7656 10.5337L14.6585 13.2525C14.3033 13.5634 13.779 13.5835 13.401 13.3008C13.023 13.018 12.8942 12.5095 13.092 12.0809C14.4081 9.22933 13.655 6.97987 12.5518 5.38019C12.1138 4.74521 11.6209 4.21649 11.18 3.80695C11.0999 4.088 10.9997 4.39262 10.8742 4.71284C10.696 5.16755 10.4662 5.65531 10.1704 6.15187C9.50801 7.26379 8.51483 8.41987 7.02982 9.34797C5.57752 10.2556 4.71646 12.6406 5.04885 15.2768C5.29944 17.2643 6.20241 19.1244 7.76396 20.256Z"
+                    fill="#ffffff"
+                  ></path>
+                </svg>
+                <a href="#" class="hover:text-[rgb(255,252,74)]">Filimootor</a>
+              </li>
+              <li class="mt-4 flex items-center gap-1">
+                <svg
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 13 13"
+                  width="18"
+                  height="18"
+                >
+                  <g
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill-opacity="1"
+                    fill="#FFFFFF"
+                  >
+                    <path
+                      d="m6.4 12.9.8-.4a31 31 0 0 0 4.4-2.7l.1-.2a3.5 3.5 0 0 0 0-1.7l-.8-1.6v.2c0 .2-.1.3-.3.4l-.2.3c-.2 0-.3.2-.5.3a34 34 0 0 1-4.7 2.7c.1.1.7.5 1 1.2.4.7.3 1.3.2 1.5M4 11.4l-1.1 1.3.1.3h1.7c0-.1.2-1-.7-1.6"
+                      fill="#FFFFFF"
+                      fill-opacity="1"
+                    ></path>
+                    <path
+                      d="M12 8.7h-.1v-.5a4 4 0 0 0-.9-1.8l-.6-.6a37.6 37.6 0 0 0-6.7-3.5l-.2.1C3.6 1.7 4 1 4.7.6c.3-.3.6-.5 1-.6h.4l.4.2 1 .4a33 33 0 0 1 4 2.5l.2.3V4a22 22 0 0 1 .2 3.9v.7Z"
+                      fill="#FFFFFF"
+                      fill-opacity="1"
+                    ></path>
+                    <path
+                      d="M2.9 9.2 3 9a131 131 0 0 1 0-5.8l.1-.4c0-.4.2-.7.4-1 .3-.6.7-1.1 1.3-1.5h-.2A33 33 0 0 0 .4 3.2l-.2.3v.3l-.1.7-.1 1v3.6c0 .1.2.2.3 0l1.2-1.3c0-.1.1-.1.2 0z"
+                      fill="#FFFFFF"
+                      fill-opacity="1"
+                    ></path>
+                  </g>
+                </svg>
+                <a href="#" class="hover:text-[rgb(255,252,74)]"
+                  >Filimo School</a
+                >
+              </li>
+              <li class="mt-4 flex items-center gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  height="18"
+                  width="18"
+                  version="1.1"
+                  id="_x32_"
+                  viewBox="0 0 512 512"
+                  xml:space="preserve"
+                >
+                  <style type="text/css">
+                    .st0 {
+                      fill: #ffffff;
+                    }
+                  </style>
+                  <g>
+                    <path
+                      class="st0"
+                      d="M486.277,196.05c-3.3-88.035-62.423-161.777-143.008-186.854v145.796   c33.365,8.352,58.118,38.456,58.118,74.415c0,42.412-34.386,76.798-76.798,76.798c-3.616,0-7.151-0.341-10.63-0.819   c-2.076,6.04-4.638,12.186-7.913,18.332c-10.443,19.581-27.86,38.789-54.202,50.739c-11.49,5.222-24.77,8.87-39.583,10.889   c-3.9,8.4-12.349,14.262-22.223,14.262h-33.244c-13.556,0-24.542-10.986-24.542-24.535c0-13.572,10.986-24.558,24.542-24.558   h33.244c8.18,0,15.372,4.038,19.831,10.192c21.762-3.081,37.905-10.574,50.14-20.034c15.494-12.025,24.915-27.681,30.17-42.673   c-25.11-12.632-42.389-38.561-42.389-68.593c0-34.459,22.702-63.623,53.966-73.345V0.908C295.473,0.325,289.109,0,282.671,0   C170.116,0,78.878,91.23,78.853,203.786c-15.186,29.236-51.607,103.489-51.607,103.489c-2.797,5.594-2.902,12.154-0.283,17.838   c2.618,5.684,7.67,9.859,13.734,11.383l33.308,8.335c0,0,16.961,76.604,20.837,94.385c5.854,26.918,14.562,32.747,40.021,32.747   c25.483,0,55.604-8.245,55.604-8.245V512H408.83v-76.426c0-27.664,7.622-62.374,29.123-88.327   C481.193,295.064,489.601,239.233,486.277,196.05z"
+                    ></path>
+                  </g>
+                </svg>
+                <a href="#" class="hover:text-[rgb(255,252,74)]">Register</a>
+              </li>
+              <li
+                class="mt-8 flex h-8 w-full items-center justify-center rounded-[5px] bg-blue-500 text-white"
+              >
+                <a href="#" class="hover:text-[rgb(255,252,74)]">Sign In</a>
+              </li>
+              <li
+                class="mb-8 mt-4 flex h-8 w-full items-center justify-center rounded-[5px] bg-blue-500 text-white"
+              >
+                <a href="#" class="hover:text-[rgb(255,252,74)]">Log In</a>
+              </li>
+              <button
+                id="sidebarClose"
+                class="my-6 flex h-8 w-full items-center justify-center rounded-[5px] bg-[#ff1c1c] text-white"
+              >
+                Close
+              </button>
+            </ul>
+          </div>
+        </div>
+      </ul>
+      <ul
+        class="tabl hidden items-center justify-center gap-[100px] p-3 px-6 font-[800] md:flex lg:hidden"
+      >
+        <div
+          class="p- flex w-full flex-nowrap items-center justify-between gap-2"
+        >
+          <div
+            class="flex transform gap-[100px] text-white transition-all duration-[400ms] hover:scale-[1.05] hover:text-yellow-300"
+          >
+            <a href="#">Signin</a>
+            <a href="#">Movie</a>
+          </div>
+          <div class="filimo flex items-center justify-center gap-3">
+            <img class="h-[30px] w-[30px]" src="./public/image/logo.png" alt="" />
+            <a href="">
+              <h2
+                class="filimo flex justify-center text-[30px] font-bold text-[#fff200]"
+              >
+                FILIMO
+              </h2>
+            </a>
+          </div>
+          <div class="flex gap-[100px] text-white">
+            <a href="#">Login</a>
+            <a href="#">Sreies</a>
+          </div>
+        </div>
+      </ul>
+      <ul
+        class="desktop hidden items-center justify-center p-3 px-9 md:hidden lg:block"
+      >
+        <div
+          class="font-roboto flex w-full items-center justify-between gap-4 font-bold"
+        >
+          <div class="flex items-center gap-24 text-white">
+            <a
+              href="#"
+              class="transform transition-all duration-[400ms] hover:scale-[1.05] hover:text-yellow-300"
+              >Login</a
+            >
+            <a
+              href="#"
+              class="transform transition-all duration-[400ms] hover:scale-[1.05] hover:text-yellow-300"
+              >Filimototor</a
+            >
+            <div class="group relative">
+              <a
+                class="menu transform transition-all duration-[400ms] hover:scale-[1.05] hover:text-yellow-300"
+                href="#"
+                >Movie</a
+              >
+              <div
+                class="absolute left-0 mt-2 hidden w-48 rounded-lg bg-gray-800 text-white shadow-lg group-hover:block"
+              >
+                <a
+                  href="#"
+                  class="block transform px-4 py-2 transition-all duration-[400ms] hover:scale-[1.05] hover:text-yellow-300"
+                  >Action</a
+                >
+                <a
+                  href="#"
+                  class="block transform px-4 py-2 transition-all duration-[400ms] hover:scale-[1.05] hover:text-yellow-300"
+                  >Comedy</a
+                >
+                <a
+                  href="#"
+                  class="block transform px-4 py-2 transition-all duration-[400ms] hover:scale-[1.05] hover:text-yellow-300"
+                  >Drama</a
+                >
+                <a
+                  href="#"
+                  class="block transform px-4 py-2 transition-all duration-[400ms] hover:scale-[1.05] hover:text-yellow-300"
+                  >Horror</a
+                >
+                <a
+                  href="#"
+                  class="block transform px-4 py-2 transition-all duration-[400ms] hover:scale-[1.05] hover:text-yellow-300"
+                  >Sci-Fi</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="filimo flex items-center justify-center gap-3">
+            <img class="h-8 w-8" src="./public/image/logo.png" alt="Logo" />
+            <a href="#">
+              <h2
+                class="filimo flex justify-center text-2xl font-bold text-[#fff826]"
+              >
+                FILIMO
+              </h2>
+            </a>
+          </div>
+          <div class="flex gap-24 text-white">
+            <div
+              class="flex transform items-center gap-1 transition-all duration-[400ms] hover:scale-[1.05] hover:text-yellow-300"
+            >
+              <svg
+                class="transform transition-all duration-[400ms] hover:scale-[1.05] hover:text-yellow-300"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M19.16 4.84a8 8 0 0 0-12 10.56l-4.4 4.39a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l4.42-4.39a8 8 0 0 0 10.56-12Zm-1.42 9.9a6 6 0 1 1 0-8.48 6 6 0 0 1 0 8.48"
+                  fill="#E8E8E8"
+                ></path>
+              </svg>
+            </div>
+            <div class="flex items-center gap-24 text-white">
+              <a
+                href="#"
+                class="transform transition-all duration-[400ms] hover:scale-[1.05] hover:text-yellow-300"
+                >Filimoschool</a
+              >
+              <a
+                href="#"
+                class="transform transition-all duration-[400ms] hover:scale-[1.05] hover:text-yellow-300"
+                >Signin</a
+              >
+            </div>
+          </div>
+        </div>
+      </ul>
+    </header>
+    <main>
+      <div class="baner">
+        <div class="custom-slider relative overflow-hidden lg:hidden">
+          <div class="mobile">
+            <a href="">
+              <div
+                class="custom-slide flex justify-center"
+                style="
+                  background-size: 100% 700px;
+                  background-repeat: no-repeat;
+                  background-image: url(./public/image/img1\ -\ Copy.png);
+                "
+              >
+                <div
+                  class="absolute bottom-[210px] flex flex-col items-start border-opacity-50"
+                >
+                  <img class="z-50" src="./public/image/WELCOME (4) (1).png" alt="" />
+                  <div
+                    class="textone absolute left-[30px] top-[300px] z-[70] flex items-end gap-5 border-b-2 font-[picky] text-[60px] leading-[50px] tracking-[-3px] text-[#ead9a5]"
+                  >
+                    <img
+                      class="h-[185px] w-[187px]"
+                      src="./public/image/img6.png"
+                      alt=""
+                    />
+                    <img
+                      class="h-[130px] w-[100px]"
+                      src="./public/image/img7.png"
+                      alt=""
+                    />
+                    <img
+                      class="picky absolute left-[192px] top-[43px] h-[75px] w-[130px]"
+                      src="./public/image/img8.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="scop-mobile flex items-center justify-center">
+                  <div
+                    class="rotten absolute bottom-[200px] flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-[#a21414] p-4"
+                  >
+                    <div class="flex justify-center pt-2">
+                      <img
+                        class="h-[20px] w-[65px]"
+                        src="./public/image/img11.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex items-center justify-center text-white">
+                      <h2 class="mb-5 mr-1 font-[picky] text-[24px]">100%</h2>
+                    </div>
+                  </div>
+                  <div
+                    class="imdb absolute bottom-[200px] z-40 flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-[#ffdb27] p-4"
+                  >
+                    <div class="flex justify-center">
+                      <img
+                        class="h-[40px] w-[70px]"
+                        src="./public/image/img10.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex items-center justify-center text-white">
+                      <h2 class="mb-5 mr-1 font-[picky] text-[24px]">9.0</h2>
+                      <span class="font-[picky] text-[24px]">/10</span>
+                    </div>
+                  </div>
+                  <div
+                    class="igb absolute bottom-[200px] flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-[#31ffff] p-4"
+                  >
+                    <div class="flex justify-center py-[]">
+                      <img
+                        class="h-[20px] w-[62px]"
+                        src="./public/image/img12.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex items-center justify-center text-white">
+                      <span class="font-[picky] text-[24px]">100%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div
+                class="custom-slide flex justify-center"
+                style="
+                  background-size: 100% 700px;
+                  background-repeat: no-repeat;
+                  background-image: url(./public/image/img13.png);
+                "
+              >
+                <div
+                  class="absolute bottom-[210px] flex flex-col items-start border-opacity-50"
+                >
+                  <img
+                    class="shelby z-50 h-[470px] w-[350px]"
+                    src="./public/image/img17.png"
+                    alt=""
+                  />
+                  <div
+                    class="textone absolute left-[0px] top-[280px] z-[70] flex items-end gap-5 border-b-2 p-2 font-[picky] text-[60px] leading-[50px] tracking-[-3px] text-[#ead9a5]"
+                  >
+                    <img
+                      class="h-[190px] w-[300px]"
+                      src="./public/image/img18.png"
+                      alt=""
+                    />
+                    <img
+                      class="h-[120px] w-[120px]"
+                      src="./public/image/img22.png"
+                      alt=""
+                    />
+                    <img
+                      class="maskm absolute left-[270px] top-[90px] h-[106px] w-[68px]"
+                      src="./public/image/img21.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="scop-mobile flex items-center justify-center">
+                  <div
+                    class="rotten absolute bottom-[200px] flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-[#a21414] p-4"
+                  >
+                    <div class="flex justify-center pt-2">
+                      <img
+                        class="h-[20px] w-[65px]"
+                        src="./public/image/img11.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex items-center justify-center text-white">
+                      <h2 class="mb-5 mr-1 font-[picky] text-[24px]">80%</h2>
+                    </div>
+                  </div>
+                  <div
+                    class="imdb absolute bottom-[200px] z-40 flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-[#ffdb27] p-4"
+                  >
+                    <div class="flex justify-center">
+                      <img
+                        class="h-[40px] w-[70px]"
+                        src="./public/image/img10.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex items-center justify-center text-white">
+                      <h2 class="mb-5 mr-1 font-[picky] text-[24px]">8.0</h2>
+                      <span class="font-[picky] text-[24px]">/10</span>
+                    </div>
+                  </div>
+                  <div
+                    class="igb absolute bottom-[200px] flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-[#31ffff] p-4"
+                  >
+                    <div class="flex justify-center py-[]">
+                      <img
+                        class="h-[20px] w-[62px]"
+                        src="./public/image/img12.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex items-center justify-center text-white">
+                      <span class="font-[picky] text-[24px]">90%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="">
+              <div
+                class="custom-slide flex justify-center"
+                style="
+                  background-size: 100% 700px;
+                  background-repeat: no-repeat;
+                  background-image: url(./public/image/img34.png);
+                "
+              >
+                <div
+                  class="absolute bottom-[200px] flex flex-col items-start border-opacity-50"
+                >
+                  <img
+                    class="shelby xl:shelby z-50 h-[470px] w-[350px]"
+                    src="./public/image/img27.png"
+                    alt=""
+                  />
+                  <div
+                    class="textone absolute right-[25px] top-[340px] z-[70] flex items-end gap-5 border-b-2 p-2 font-[picky] text-[60px] leading-[50px] tracking-[-3px] text-[#ead9a5]"
+                  >
+                    <img
+                      class="h-[124px] w-[211px]"
+                      src="./public/image/img28.png"
+                      alt=""
+                    />
+                    <img
+                      class="h-[82px] w-[47px]"
+                      src="./public/image/img30.png"
+                      alt=""
+                    />
+                    <img
+                      class="bracking absolute left-[200px] top-[0px] h-[82px] w-[63px]"
+                      src="./public/image/img32.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="scop-mobile flex items-center justify-center">
+                  <div
+                    class="rotten absolute bottom-[200px] flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-[#a21414] p-4"
+                  >
+                    <div class="flex justify-center pt-2">
+                      <img
+                        class="h-[20px] w-[65px]"
+                        src="./public/image/img11.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex items-center justify-center text-white">
+                      <h2 class="mb-5 mr-1 font-[picky] text-[24px]">100%</h2>
+                    </div>
+                  </div>
+                  <div
+                    class="imdb absolute bottom-[200px] z-40 flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-[#ffdb27] p-4"
+                  >
+                    <div class="flex justify-center">
+                      <img
+                        class="h-[40px] w-[70px]"
+                        src="./public/image/img10.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex items-center justify-center text-white">
+                      <h2 class="mb-5 mr-1 font-[picky] text-[24px]">10</h2>
+                      <span class="font-[picky] text-[24px]">/10</span>
+                    </div>
+                  </div>
+                  <div
+                    class="igb absolute bottom-[200px] flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-[#31ffff] p-4"
+                  >
+                    <div class="flex justify-center py-[]">
+                      <img
+                        class="h-[20px] w-[62px]"
+                        src="./public/image/img12.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="flex items-center justify-center text-white">
+                      <span class="font-[picky] text-[24px]">100%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <button
+              id="customPrevBtn"
+              class="custom-nav-btn absolute bottom-[20px] left-[20px] z-[9999] h-[55px] w-[50px] rounded-[100%] bg-[#2B2B2B] text-[#ffffff]"
+            >
+              &#10094;
+            </button>
+            <button
+              id="customNextBtn"
+              class="custom-nav-btn absolute bottom-[20px] right-[20px] z-[9999] h-[55px] w-[50px] rounded-[100%] bg-[#2B2B2B] text-[#ffffff]"
+            >
+              &#10095;
+            </button>
+          </div>
+        </div>
+        <div class="slider slidertwo hidden lg:flex">
+          <div class="slide current pickyb">
+            <div class="flex items-center justify-between px-8">
+              <div class="container mt-20 w-[300px]">
+                <div class="header flex items-end border-b-2">
+                  <img
+                    class="image-large h-[185px] w-[187px]"
+                    src="./public/image/img6.png"
+                    alt="Large Image"
+                  />
+                  <img
+                    class="image-medium h-[130px] w-[100px]"
+                    src="./public/image/img7.png"
+                    alt="Medium Image"
+                  />
+                  <img
+                    class="picky absolute left-[201px] top-[140px] h-[67px] w-[130px]"
+                    src="./public/image/img8.png"
+                    alt="Picky Image"
+                  />
+                </div>
+
+                <div
+                  class="door-section absolute bottom-[230px] left-[600px] hidden items-center justify-center xl:flex"
+                >
+                  <img
+                    class="doorone h-[230px] w-[160px]"
+                    src="./public/image/door1.png"
+                    alt="Door One"
+                  />
+                  <img
+                    class="doortwo h-[230px] w-[160px]"
+                    src="./public/image/door2.png"
+                    alt="Door Two"
+                  />
+                </div>
+
+                <div
+                  class="description relative p-3 text-left text-white duration-[2s]"
+                >
+                  <p class="h-[168px] w-[276px] overflow-hidden">
+                    "Peaky Blinders" is a British crime drama television series
+                    set in post-World War I Birmingham, England. It follows the
+                    ambitious Shelby family, led by the cunning Thomas Shelby,
+                    as they navigate the criminal underworld and struggle for
+                    power and influence. The show is known for its stylish
+                    cinematography, strong performances, particularly by Cillian
+                    Murphy as Thomas, and its gritty portrayal of the era’s
+                    socio-political landscape. Themes of loyalty, family, and
+                    the impact of war are central to the narrative, making
+                    "Peaky Blinders" a gripping and compelling watch.
+                  </p>
+
+                  <div
+                    class="score score-section absolute left-[80px] top-[600px] flex items-end xl:top-[550px]"
+                  >
+                    <div
+                      class="rotten score-card absolute bottom-[200px] flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-red-700 p-4"
+                    >
+                      <div class="flex justify-center pt-2">
+                        <img
+                          class="h-[20px] w-[65px]"
+                          src="./public/image/img11.png"
+                          alt="Rotten Image"
+                        />
+                      </div>
+                      <div class="flex items-center justify-center text-white">
+                        <h2 class="mb-5 mr-1 font-[picky] text-[24px]">100%</h2>
+                      </div>
+                    </div>
+
+                    <div
+                      class="imdb score-card absolute bottom-[200px] z-40 flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-yellow-400 p-4"
+                    >
+                      <div class="flex justify-center">
+                        <img
+                          class="h-[40px] w-[70px]"
+                          src="./public/image/img10.png"
+                          alt="IMDB Image"
+                        />
+                      </div>
+                      <div class="flex items-center justify-center text-white">
+                        <h2 class="mb-5 mr-1 font-[picky] text-[24px]">9.0</h2>
+                        <span class="font-[picky] text-[24px]">/10</span>
+                      </div>
+                    </div>
+
+                    <div
+                      class="igb score-card absolute bottom-[200px] flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-cyan-400 p-4"
+                    >
+                      <div class="flex justify-center">
+                        <img
+                          class="h-[20px] w-[62px]"
+                          src="./public/image/img12.png"
+                          alt="IGB Image"
+                        />
+                      </div>
+                      <div class="flex items-center justify-center text-white">
+                        <span class="font-[picky] text-[24px]">100%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute bottom-[70px] right-[70px] flex flex-col items-center justify-center"
+              >
+                <img
+                  class="shelby flex justify-center"
+                  src="./public/image/WELCOME (4) (1).png"
+                  alt=""
+                />
+                <div
+                  class="border-r-2rounded-lg relative top-[0px] flex w-[450px] justify-center gap-2 border-l-2 border-r-2 shadow-lg"
+                >
+                  <div></div>
+                  <img
+                    class="h-[100px] w-[100px] rounded-full border-2 border-gray-600 object-cover"
+                    src="./public/image/act1.png"
+                    alt="Activity 1"
+                  />
+                  <img
+                    class="h-[100px] w-[100px] rounded-full border-gray-600 object-cover"
+                    src="./public/image/act2.png"
+                    alt="Activity 2"
+                  />
+                  <img
+                    class="h-[100px] w-[100px] rounded-full border-2 border-gray-600 object-cover"
+                    src="./public/image/act3.png"
+                    alt="Activity 3"
+                  />
+                  <img
+                    class="h-[100px] w-[100px] rounded-full border-2 border-gray-600 object-cover"
+                    src="./public/image/act4.png"
+                    alt="Activity 4"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class=""></div>
+          </div>
+          <a href=""></a>
+          <div class="slide current monyb">
+            <div class="flex items-center justify-between px-8">
+              <div class="container mt-20 w-[300px]">
+                <div class="header flex items-end border-b-2">
+                  <img
+                    class="image-large h-[185px] w-[187px]"
+                    src="./public/image/img18.png"
+                    alt="Large Image"
+                  />
+                  <img
+                    class="image-medium h-[130px] w-[100px]"
+                    src="./public/image/img22.png"
+                    alt="Medium Image"
+                  />
+                  <img
+                    class="maskm absolute left-[240px] top-[150px] h-[106px] w-[68px]"
+                    src="./public/image/img21.png"
+                    alt="Picky Image"
+                  />
+                </div>
+
+                <div
+                  class="door-section absolute bottom-[230px] left-[600px] hidden items-center justify-center xl:flex"
+                >
+                  <img
+                    class="doorone h-[230px] w-[160px]"
+                    src="./public/image/door1.png"
+                    alt="Door One"
+                  />
+                  <img
+                    class="doortwo h-[230px] w-[160px]"
+                    src="./public/image/door2.png"
+                    alt="Door Two"
+                  />
+                </div>
+
+                <div
+                  class="description relative p-3 text-left text-white duration-[2s]"
+                >
+                  <p class="h-[168px] w-[276px] overflow-hidden">
+                    "Money Heist" (original title: "La Casa de Papel") is a
+                    Spanish television series that follows a group of robbers,
+                    led by a mastermind known as "The Professor," as they plan
+                    and execute intricate heists on Spain's Royal Mint and the
+                    Bank of Spain. The show is known for its suspenseful
+                    storytelling, complex characters, and social commentary on
+                    issues such as resistance and capitalism.
+                  </p>
+
+                  <div
+                    class="score-section scopa absolute left-[80px] top-[600px] flex items-end xl:top-[550px]"
+                  >
+                    <div
+                      class="rotten score-card absolute bottom-[200px] flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-red-700 p-4"
+                    >
+                      <div class="flex justify-center pt-2">
+                        <img
+                          class="h-[20px] w-[65px]"
+                          src="./public/image/img11.png"
+                          alt="Rotten Image"
+                        />
+                      </div>
+                      <div class="flex items-center justify-center text-white">
+                        <h2 class="mb-5 mr-1 font-[picky] text-[24px]">90%</h2>
+                      </div>
+                    </div>
+
+                    <div
+                      class="imdb score-card absolute bottom-[200px] z-40 flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-yellow-400 p-4"
+                    >
+                      <div class="flex justify-center">
+                        <img
+                          class="h-[40px] w-[70px]"
+                          src="./public/image/img10.png"
+                          alt="IMDB Image"
+                        />
+                      </div>
+                      <div class="flex items-center justify-center text-white">
+                        <h2 class="mb-5 mr-1 font-[picky] text-[24px]">8.0</h2>
+                        <span class="font-[picky] text-[24px]">/10</span>
+                      </div>
+                    </div>
+
+                    <div
+                      class="igb score-card absolute bottom-[200px] flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-cyan-400 p-4"
+                    >
+                      <div class="flex justify-center">
+                        <img
+                          class="h-[20px] w-[62px]"
+                          src="./public/image/img12.png"
+                          alt="IGB Image"
+                        />
+                      </div>
+                      <div class="flex items-center justify-center text-white">
+                        <span class="font-[picky] text-[24px]">80%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute bottom-[70px] right-[70px] flex flex-col items-center justify-center"
+              >
+                <img
+                  class="shelby flex justify-center"
+                  src="./public/image/img17.png"
+                  alt=""
+                />
+                <div
+                  class="border-r-2rounded-lg relative top-[0px] flex w-[450px] justify-center gap-2 border-l-2 border-r-2 shadow-lg"
+                >
+                  <div></div>
+                  <img
+                    class="h-[100px] w-[100px] rounded-full border-2 border-gray-600 object-cover"
+                    src="./public/image/act6.png"
+                    alt="Activity 1"
+                  />
+                  <img
+                    class="h-[100px] w-[100px] rounded-full border-gray-600 object-cover"
+                    src="./public/image/act7.png"
+                    alt="Activity 2"
+                  />
+                  <img
+                    class="h-[100px] w-[100px] rounded-full border-2 border-gray-600 object-cover"
+                    src="./public/image/act8.png"
+                    alt="Activity 3"
+                  />
+                  <img
+                    class="h-[100px] w-[100px] rounded-full border-2 border-gray-600 object-cover"
+                    src="./public/image/act9.png"
+                    alt="Activity 4"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class=""></div>
+          </div>
+          <div class="slide current brackingbad">
+            <div class="flex items-center justify-between px-8">
+              <div class="container mt-20 w-[300px]">
+                <div class="header flex items-end border-b-2">
+                  <img
+                    class="h-[124px] w-[211px]"
+                    src="./public/image/img28.png"
+                    alt="Large Image"
+                  />
+                  <img
+                    class="h-[82px] w-[47px]"
+                    src="./public/image/img30.png"
+                    alt="Medium Image"
+                  />
+                  <img
+                    class="bracking absolute left-[200px] top-[60px] h-[82px] w-[63px]"
+                    src="./public/image/img32.png"
+                    alt="Picky Image"
+                  />
+                </div>
+
+                <div
+                  class="door-section absolute bottom-[230px] left-[600px] hidden items-center justify-center xl:flex"
+                >
+                  <img
+                    class="doorone h-[230px] w-[160px]"
+                    src="./public/image/door1.png"
+                    alt="Door One"
+                  />
+                  <img
+                    class="doortwo h-[230px] w-[160px]"
+                    src="./public/image/door2.png"
+                    alt="Door Two"
+                  />
+                </div>
+
+                <div
+                  class="description relative p-3 text-left text-white duration-[2s]"
+                >
+                  <p class="h-[168px] w-[276px] overflow-hidden">
+                    "Breaking Bad" is a critically acclaimed television series
+                    created by Vince Gilligan that aired from 2008 to 2013. It
+                    follows the transformation of Walter White, a high school
+                    chemistry teacher who turns to cooking methamphetamine after
+                    being diagnosed with terminal cancer. As he partners with
+                    former student Jesse Pinkman, Walter descends into the
+                    criminal underworld, grappling with moral dilemmas, family
+                    issues, and the consequences of his choices.
+                  </p>
+                  <div
+                    class="score-section absolute left-[80px] top-[600px] flex items-end xl:top-[550px]"
+                  >
+                    <div
+                      class="rotten score-card absolute bottom-[200px] flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-red-700 p-4"
+                    >
+                      <div class="flex justify-center pt-2">
+                        <img
+                          class="h-[20px] w-[65px]"
+                          src="./public/image/img11.png"
+                          alt="Rotten Image"
+                        />
+                      </div>
+                      <div class="flex items-center justify-center text-white">
+                        <h2 class="mb-5 mr-1 font-[picky] text-[24px]">100%</h2>
+                      </div>
+                    </div>
+
+                    <div
+                      class="imdb score-card absolute bottom-[200px] z-40 flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-yellow-400 p-4"
+                    >
+                      <div class="flex justify-center">
+                        <img
+                          class="h-[40px] w-[70px]"
+                          src="./public/image/img10.png"
+                          alt="IMDB Image"
+                        />
+                      </div>
+                      <div class="flex items-center justify-center text-white">
+                        <h2 class="mb-5 mr-1 font-[picky] text-[24px]">10</h2>
+                        <span class="font-[picky] text-[24px]">/10</span>
+                      </div>
+                    </div>
+
+                    <div
+                      class="igb score-card absolute bottom-[200px] flex h-[130px] w-[130px] flex-col justify-center gap-5 rounded-xl bg-cyan-400 p-4"
+                    >
+                      <div class="flex justify-center">
+                        <img
+                          class="h-[20px] w-[62px]"
+                          src="./public/image/img12.png"
+                          alt="IGB Image"
+                        />
+                      </div>
+                      <div class="flex items-center justify-center text-white">
+                        <span class="font-[picky] text-[24px]">100%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute bottom-[70px] right-[70px] flex flex-col items-center justify-center"
+              >
+                <img
+                  class="shelby flex justify-center"
+                  src="./public/image/img27.png"
+                  alt=""
+                />
+                <div
+                  class="border-r-2rounded-lg relative top-[0px] flex w-[450px] justify-center gap-2 border-l-2 border-r-2 shadow-lg"
+                >
+                  <div></div>
+                  <img
+                    class="h-[100px] w-[100px] rounded-full border-2 border-gray-600 object-cover"
+                    src="./public/image/act11.png"
+                    alt="Activity 1"
+                  />
+                  <img
+                    class="h-[100px] w-[100px] rounded-full border-gray-600 object-cover"
+                    src="./public/image/act12.png"
+                    alt="Activity 2"
+                  />
+                  <img
+                    class="h-[100px] w-[100px] rounded-full border-2 border-gray-600 object-cover"
+                    src="./public/image/act13.png"
+                    alt="Activity 3"
+                  />
+                  <img
+                    class="h-[100px] w-[100px] rounded-full border-2 border-gray-600 object-cover"
+                    src="./public/image/act14.png"
+                    alt="Activity 4"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class=""></div>
+          </div>
+          <div>
+            <button id="prevBtn" class="nav-btn">&#10094;</button>
+            <button id="nextBtn" class="nav-btn">&#10095;</button>
+          </div>
+        </div>
+      </div>
+      <div class="lg:flex lg:justify-center lg:overflow-x-hidden">
+        <div class="max-w-[1400px]">
+          <div>
+            <div class="mobilecel w-full border-yellow-50 p-3 font-[roboto]">
+              <div class="flex items-center">
+                <h2 class="border-l-4 p-3 font-[roboto] text-[24px] font-[800]">
+                  Most popular celebrities
+                </h2>
+                <svg
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  class="ipc-icon ipc-icon--chevron-right"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  role="presentation"
+                >
+                  <path fill="none" d="M0 0h24v24H0V0z"></path>
+                  <path
+                    d="M9.29 6.71a.996.996 0 0 0 0 1.41L13.17 12l-3.88 3.88a.996.996 0 1 0 1.41 1.41l4.59-4.59a.996.996 0 0 0 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"
+                    fill="#FFFFFF"
+                  ></path>
+                </svg>
+              </div>
+              <div class="fancy-carousel flex shrink-0 overflow-x-auto">
+                <div
+                  class="fancy-carousel-wrapper flex shrink-0 overflow-x-auto"
+                >
+                  <div
+                    class="fancy-block flex flex-col items-center justify-center transition-opacity duration-300 hover:opacity-50"
+                  >
+                    <img class="rounded-full" src="./public/image/celeb1.png" alt="" />
+                    <h3 class="mt-3 text-center text-white">Kira Kosarin</h3>
+                  </div>
+                  <div
+                    class="fancy-block flex flex-col items-center justify-center transition-opacity duration-300 hover:opacity-50"
+                  >
+                    <img class="rounded-full" src="./public/image/celeb2.png" alt="" />
+                    <h3 class="mt-3 text-center text-white">Adam Brody</h3>
+                  </div>
+
+                  <div
+                    class="fancy-block flex flex-col items-center justify-center transition-opacity duration-300 hover:opacity-50"
+                  >
+                    <img class="rounded-full" src="./public/image/celeb3.png" alt="" />
+                    <h3 class="mt-3 text-center text-white">Cooper Koch</h3>
+                  </div>
+
+                  <div
+                    class="fancy-block flex flex-col items-center justify-center transition-opacity duration-300 hover:opacity-50"
+                  >
+                    <img class="rounded-full" src="./public/image/celeb4.png" alt="" />
+                    <h3 class="mt-3 text-center text-white">Johnny Depp</h3>
+                  </div>
+
+                  <div
+                    class="fancy-block flex flex-col items-center justify-center transition-opacity duration-300 hover:opacity-50"
+                  >
+                    <img class="rounded-full" src="./public/image/celeb5.png" alt="" />
+                    <h3 class="mt-3 text-center text-white">
+                      Leonardo DiCaprio
+                    </h3>
+                  </div>
+
+                  <div
+                    class="fancy-block flex flex-col items-center justify-center transition-opacity duration-300 hover:opacity-50"
+                  >
+                    <img class="rounded-full" src="./public/image/celeb6.png" alt="" />
+                    <h3 class="mt-3 text-center text-white">Molly Quinn</h3>
+                  </div>
+
+                  <div
+                    class="fancy-block flex flex-col items-center justify-center transition-opacity duration-300 hover:opacity-50"
+                  >
+                    <img class="rounded-full" src="./public/image/celeb7.png" alt="" />
+                    <h3 class="mt-3 text-center text-white">Bella Thorne</h3>
+                  </div>
+
+                  <div
+                    class="fancy-block flex flex-col items-center justify-center transition-opacity duration-300 hover:opacity-50"
+                  >
+                    <img class="rounded-full" src="./public/image/celeb8.png" alt="" />
+                    <h3 class="mt-3 text-center text-white">Brad Pitt</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="flex pl-4">
+              <h2
+                class="pl-3 font-[roboto] text-[24px] font-bold lg:border-l-4"
+              >
+                Genre
+              </h2>
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                class="ipc-icon ipc-icon--chevron-right"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                <path
+                  d="M9.29 6.71a.996.996 0 0 0 0 1.41L13.17 12l-3.88 3.88a.996.996 0 1 0 1.41 1.41l4.59-4.59a.996.996 0 0 0 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"
+                  fill="#FFFFFF"
+                ></path>
+              </svg>
+            </div>
+            <div
+              class="categories flex justify-center gap-5 font-[popins] lg:flex lg:gap-[150px]"
+            >
+              <div>
+                <div
+                  class="flex transform flex-col items-center justify-center gap-5 grayscale-[100%] transition-all duration-[400ms] hover:grayscale-0"
+                >
+                  <img
+                    class="h-[120px] w-[120px] rounded-[15px]"
+                    src="./public/image/cat1.png"
+                    alt=""
+                  />
+                  <h2 class="text-justify text-[16px]">Comedy</h2>
+                </div>
+
+                <div
+                  class="flex transform flex-col items-center justify-center gap-5 grayscale-[100%] transition-all duration-[400ms] hover:grayscale-0"
+                >
+                  <img
+                    class="h-[120px] w-[120px] rounded-[15px]"
+                    src="./public/image/cat2.png"
+                    alt=""
+                  />
+                  <h2 class="text-justify text-[16px]">Romance</h2>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="flex transform flex-col items-center justify-center gap-5 grayscale-[100%] transition-all duration-[400ms] hover:grayscale-0"
+                >
+                  <img
+                    class="h-[120px] w-[120px] rounded-[15px]"
+                    src="./public/image/cat3.png"
+                    alt=""
+                  />
+                  <h2 class="text-justify text-[16px]">Action</h2>
+                </div>
+
+                <div
+                  class="flex transform flex-col items-center justify-center gap-5 grayscale-[100%] transition-all duration-[400ms] hover:grayscale-0"
+                >
+                  <img
+                    class="h-[120px] w-[120px] rounded-[15px]"
+                    src="./public/image/cat4.png"
+                    alt=""
+                  />
+                  <h2 class="text-justify text-[16px]">Horror</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-[150px]">
+            <div class="mt-10 flex items-center">
+              <h2
+                class="ml-5 h-auto w-auto border-l-4 px-3 font-[roboto] text-[24px] font-[800]"
+              >
+                Top 5 on Filimo this week
+              </h2>
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                class="ipc-icon ipc-icon--chevron-right"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                <path
+                  d="M9.29 6.71a.996.996 0 0 0 0 1.41L13.17 12l-3.88 3.88a.996.996 0 1 0 1.41 1.41l4.59-4.59a.996.996 0 0 0 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"
+                  fill="#FFFFFF"
+                ></path>
+              </svg>
+            </div>
+            <div
+              class="mx-10 mt-10 flex shrink-0 justify-start gap-[30px] overflow-x-auto overflow-y-hidden"
+            >
+              <div class="flex">
+                <div class="flex">
+                  <div class="border-1px group relative h-[330px] w-[260px]">
+                    <img
+                      class="hover:rpu h-full w-full transform rounded-[20px] transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                      src="./public./image/mov6.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute left-1/2 top-5 hidden -translate-x-1/2 transform group-hover:flex"
+                    >
+                      <div class="name">
+                        <h2 class="font-bold">Game of Thrones</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="gap-10 text-[16px] font-bold">Duration:</h2>
+                        <h2>1h</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Country:</h2>
+                        <h2>America</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Rating:</h2>
+                        <h2>9.2</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                    >
+                      <div
+                        class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                      >
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Watch
+                          </button>
+                        </a>
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Trailer
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="">
+                  <div class="border-1px group relative h-[330px] w-[260px]">
+                    <img
+                      class="hover:rpu h-full w-full transform rounded-[20px] transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                      src="./public./image/mov7.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute left-1/2 top-5 hidden -translate-x-1/2 transform group-hover:flex"
+                    >
+                      <div class="name">
+                        <h2 class="font-bold">Peaky Blinders</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="gap-10 text-[16px] font-bold">Duration:</h2>
+                        <h2>1h</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Country:</h2>
+                        <h2>America</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Rating:</h2>
+                        <h2>8.8</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                    >
+                      <div
+                        class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                      >
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Watch
+                          </button>
+                        </a>
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Trailer
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="">
+                  <div class="border-1px group relative h-[330px] w-[260px]">
+                    <img
+                      class="hover:rpu h-full w-full transform rounded-[20px] transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                      src="./public./image/mov8.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute left-1/2 top-5 hidden -translate-x-1/2 transform group-hover:flex"
+                    >
+                      <div class="name">
+                        <h2 class="font-bold">Money Heist</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="gap-10 text-[16px] font-bold">Duration:</h2>
+                        <h2>1h</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Country:</h2>
+                        <h2>America</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Rating:</h2>
+                        <h2>8.2</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                    >
+                      <div
+                        class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                      >
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Watch
+                          </button>
+                        </a>
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Trailer
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="flex">
+                  <div class="border-1px group relative h-[330px] w-[260px]">
+                    <img
+                      class="hover:rpu h-full w-full transform rounded-[20px] transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                      src="./public/image/mov10.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute left-1/2 top-5 hidden -translate-x-1/2 transform group-hover:flex"
+                    >
+                      <div class="name">
+                        <h2 class="font-bold">Joker</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="gap-10 text-[16px] font-bold">Duration:</h2>
+                        <h2>2h 2m</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Country:</h2>
+                        <h2>America</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Rating:</h2>
+                        <h2>8.4</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                    >
+                      <div
+                        class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                      >
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Watch
+                          </button>
+                        </a>
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Trailer
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="flex">
+                  <div class="border-1px group relative h-[330px] w-[260px]">
+                    <img
+                      class="hover:rpu h-full w-full transform rounded-[20px] transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                      src="./public/image/mov5.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute left-1/2 top-5 hidden -translate-x-1/2 transform group-hover:flex"
+                    >
+                      <div class="name">
+                        <h2 class="font-bold">Lord of the Rings</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="gap-10 text-[16px] font-bold">Duration:</h2>
+                        <h2>1h</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Country:</h2>
+                        <h2>America</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Rating:</h2>
+                        <h2>6.9</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                    >
+                      <div
+                        class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                      >
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Watch
+                          </button>
+                        </a>
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Trailer
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-[150px]">
+            <div class="mt-10 flex items-center">
+              <h2
+                class="ml-5 h-auto w-auto border-l-4 px-3 font-[roboto] text-[24px] font-[800]"
+              >
+                Festival winners
+              </h2>
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                class="ipc-icon ipc-icon--chevron-right"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                <path
+                  d="M9.29 6.71a.996.996 0 0 0 0 1.41L13.17 12l-3.88 3.88a.996.996 0 1 0 1.41 1.41l4.59-4.59a.996.996 0 0 0 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"
+                  fill="#FFFFFF"
+                ></path>
+              </svg>
+            </div>
+            <div
+              class="mx-10 mt-10 flex shrink-0 justify-start gap-[30px] overflow-x-auto overflow-y-hidden"
+            >
+              <div class="flex">
+                <div class="flex">
+                  <div class="border-1px group relative h-[330px] w-[260px]">
+                    <img
+                      class="hover:rpu h-full w-full transform rounded-[20px] object-cover transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                      src="./public/image/mov11.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute left-1/2 top-5 hidden -translate-x-1/2 transform group-hover:flex"
+                    >
+                      <div class="name">
+                        <h2 class="font-bold">Wednesday</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="gap-10 text-[16px] font-bold">Duration:</h2>
+                        <h2>45m</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Country:</h2>
+                        <h2>America</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Rating:</h2>
+                        <h2>8.1</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                    >
+                      <div
+                        class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                      >
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Watch
+                          </button>
+                        </a>
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Trailer
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="">
+                  <div class="border-1px group relative h-[330px] w-[260px]">
+                    <img
+                      class="hover:rpu h-full w-full transform rounded-[20px] object-cover transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                      src="./public/image/mov12.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute left-1/2 top-5 hidden -translate-x-1/2 transform group-hover:flex"
+                    >
+                      <div class="name">
+                        <h2 class="font-bold">Soul</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="gap-10 text-[16px] font-bold">Duration:</h2>
+                        <h2>1h</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Country:</h2>
+                        <h2>America</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Rating:</h2>
+                        <h2>8.8</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                    >
+                      <div
+                        class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                      >
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Watch
+                          </button>
+                        </a>
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Trailer
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="">
+                  <div class="border-1px group relative h-[330px] w-[260px]">
+                    <img
+                      class="hover:rpu h-full w-full transform rounded-[20px] transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                      src="./public/image/mov13.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute left-1/2 top-5 hidden -translate-x-1/2 transform group-hover:flex"
+                    >
+                      <div class="name">
+                        <h2 class="font-bold">Queen's Gambit</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="gap-10 text-[16px] font-bold">Duration:</h2>
+                        <h2>1h</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Country:</h2>
+                        <h2>America</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Rating:</h2>
+                        <h2>8.5</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                    >
+                      <div
+                        class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                      >
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Watch
+                          </button>
+                        </a>
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Trailer
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="flex">
+                  <div class="border-1px group relative h-[330px] w-[260px]">
+                    <img
+                      class="hover:rpu h-full w-full transform rounded-[20px] object-cover transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                      src="./public/image/mov14'.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute left-1/2 top-5 hidden -translate-x-1/2 transform group-hover:flex"
+                    >
+                      <div class="name">
+                        <h2 class="font-bold">See</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="gap-10 text-[16px] font-bold">Duration:</h2>
+                        <h2>2h 2m</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Country:</h2>
+                        <h2>America</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Rating:</h2>
+                        <h2>8.4</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                    >
+                      <div
+                        class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                      >
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 object-cover transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Watch
+                          </button>
+                        </a>
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Trailer
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="flex">
+                  <div class="border-1px group relative h-[330px] w-[260px]">
+                    <img
+                      class="hover:rpu h-full w-full transform rounded-[20px] transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                      src="./public/image/mov5.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute left-1/2 top-5 hidden -translate-x-1/2 transform group-hover:flex"
+                    >
+                      <div class="name">
+                        <h2 class="font-bold">Lord of the Rings</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="gap-10 text-[16px] font-bold">Duration:</h2>
+                        <h2>1h</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Country:</h2>
+                        <h2>America</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Rating:</h2>
+                        <h2>6.9</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                    >
+                      <div
+                        class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                      >
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Watch
+                          </button>
+                        </a>
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Trailer
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-[150px]">
+            <div class="mt-10 flex items-center">
+              <h2
+                class="ml-5 h-auto w-auto border-l-4 px-3 font-[roboto] text-[24px] font-[800]"
+              >
+                Trending Now
+              </h2>
+              <svg
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                class="ipc-icon ipc-icon--chevron-right"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                role="presentation"
+              >
+                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                <path
+                  d="M9.29 6.71a.996.996 0 0 0 0 1.41L13.17 12l-3.88 3.88a.996.996 0 1 0 1.41 1.41l4.59-4.59a.996.996 0 0 0 0-1.41L10.7 6.7c-.38-.38-1.02-.38-1.41.01z"
+                  fill="#FFFFFF"
+                ></path>
+              </svg>
+            </div>
+            <div
+              class="mx-10 mt-10 flex shrink-0 justify-start gap-[30px] overflow-x-auto overflow-y-hidden"
+            >
+              <div class="flex">
+                <div class="flex">
+                  <div class="flex">
+                    <div class="">
+                      <div
+                        class="border-1px group relative h-[330px] w-[260px]"
+                      >
+                        <img
+                          class="hover:rpu h-full w-full transform rounded-[20px] object-cover transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                          src="./public/image/mov19.png"
+                          alt=""
+                        />
+                        <div
+                          class="absolute left-1/2 top-3 hidden -translate-x-1/2 transform group-hover:flex"
+                        >
+                          <div class="name">
+                            <h2 class="font-bold">The Dark Knight</h2>
+                          </div>
+                        </div>
+                        <div
+                          class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                        >
+                          <div class="flex items-center gap-[100px]">
+                            <h2 class="gap-10 text-[16px] font-bold">
+                              Duration:
+                            </h2>
+                            <h2>2h 39m</h2>
+                          </div>
+                        </div>
+                        <div
+                          class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                        >
+                          <div class="flex items-center gap-[100px]">
+                            <h2 class="text-[16px] font-bold">Country:</h2>
+                            <h2>America</h2>
+                          </div>
+                        </div>
+                        <div
+                          class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                        >
+                          <div class="flex items-center gap-[100px]">
+                            <h2 class="text-[16px] font-bold">Rating:</h2>
+                            <h2>9.0</h2>
+                          </div>
+                        </div>
+                        <div
+                          class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                        >
+                          <div
+                            class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                          >
+                            <a href="">
+                              <button
+                                class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                              >
+                                Watch
+                              </button>
+                            </a>
+                            <a href="">
+                              <button
+                                class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                              >
+                                Trailer
+                              </button>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="">
+                  <div class="border-1px group relative h-[330px] w-[260px]">
+                    <img
+                      class="hover:rpu h-full w-full transform rounded-[20px] object-cover transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                      src="./public/image/mov15.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute left-1/2 top-3 hidden -translate-x-1/2 transform group-hover:flex"
+                    >
+                      <div class="name">
+                        <h2 class="font-bold">Killers of the Flower Moon</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="gap-10 text-[16px] font-bold">Duration:</h2>
+                        <h2>3h 26m</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Country:</h2>
+                        <h2>America</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Rating:</h2>
+                        <h2>7.6</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                    >
+                      <div
+                        class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                      >
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Watch
+                          </button>
+                        </a>
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Trailer
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="">
+                  <div class="border-1px group relative h-[330px] w-[260px]">
+                    <img
+                      class="hover:rpu h-full w-full transform rounded-[20px] transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                      src="./public/image/mov16.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute left-1/2 top-5 hidden -translate-x-1/2 transform group-hover:flex"
+                    >
+                      <div class="name">
+                        <h2 class="font-bold">The Witcher</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="gap-10 text-[16px] font-bold">Duration:</h2>
+                        <h2>1h</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Country:</h2>
+                        <h2>America</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Rating:</h2>
+                        <h2>7.2</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                    >
+                      <div
+                        class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                      >
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Watch
+                          </button>
+                        </a>
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Trailer
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="flex">
+                  <div class="border-1px group relative h-[330px] w-[260px]">
+                    <img
+                      class="hover:rpu h-full w-full transform rounded-[20px] object-cover transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                      src="./public/image/mov17.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute left-1/2 top-5 hidden -translate-x-1/2 transform group-hover:flex"
+                    >
+                      <div class="name">
+                        <h2 class="font-bold">House of the Dragon</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="gap-10 text-[16px] font-bold">Duration:</h2>
+                        <h2>50m</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Country:</h2>
+                        <h2>America</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Rating:</h2>
+                        <h2>8.4</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                    >
+                      <div
+                        class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                      >
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 object-cover transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Watch
+                          </button>
+                        </a>
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Trailer
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="flex">
+                  <div class="border-1px group relative h-[330px] w-[260px]">
+                    <img
+                      class="hover:rpu h-full w-full transform rounded-[20px] transition-all duration-500 hover:scale-[1.05] hover:opacity-35"
+                      src="./public/image/mov18.png"
+                      alt=""
+                    />
+                    <div
+                      class="absolute left-1/2 top-5 hidden -translate-x-1/2 transform group-hover:flex"
+                    >
+                      <div class="name">
+                        <h2 class="font-bold">Shogan</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[60px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="gap-10 text-[16px] font-bold">Duration:</h2>
+                        <h2>1h</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[100px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Country:</h2>
+                        <h2>America</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[13px] top-[140px] hidden border-b-2 group-hover:flex"
+                    >
+                      <div class="flex items-center gap-[100px]">
+                        <h2 class="text-[16px] font-bold">Rating:</h2>
+                        <h2>6.9</h2>
+                      </div>
+                    </div>
+                    <div
+                      class="absolute left-[30px] top-[230px] hidden transform flex-col items-center gap-3 transition-all duration-500 group-hover:flex"
+                    >
+                      <div
+                        class="flex transform flex-col gap-3 transition-all delay-1000 duration-1000"
+                      >
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Watch
+                          </button>
+                        </a>
+                        <a href="">
+                          <button
+                            class="hover:to-y-400 h-[35px] w-[200px] rounded-[10px] bg-gray-800 transition-all duration-500 hover:bg-yellow-500 hover:from-yellow-500"
+                          >
+                            Trailer
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="group h-[300px] bg-[#070a22] py-6 font-[popins] text-white">
+      <div class="hidden xl:flex">
+        <div class="flex justify-start">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="16"
+            height="16"
+            viewBox="0 0 128 128"
+            aria-hidden="true"
+            role="img"
+            class="star absolute translate-x-[100px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <path
+              d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+              fill="#fdd835"
+            ></path>
+            <path
+              d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+              fill="#ffff8d"
+            ></path>
+            <path
+              d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+              fill="#f4b400"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="16"
+            height="16"
+            viewBox="0 0 128 128"
+            aria-hidden="true"
+            role="img"
+            class="star absolute translate-x-[100px] translate-y-[100px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <path
+              d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+              fill="#fdd835"
+            ></path>
+            <path
+              d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+              fill="#ffff8d"
+            ></path>
+            <path
+              d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+              fill="#f4b400"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="16"
+            height="16"
+            viewBox="0 0 128 128"
+            aria-hidden="true"
+            role="img"
+            class="star absolute translate-x-[50px] translate-y-[50px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <path
+              d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+              fill="#fdd835"
+            ></path>
+            <path
+              d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+              fill="#ffff8d"
+            ></path>
+            <path
+              d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+              fill="#f4b400"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="16"
+            height="16"
+            viewBox="0 0 128 128"
+            aria-hidden="true"
+            role="img"
+            class="star absolute translate-x-[50px] translate-y-[150px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <path
+              d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+              fill="#fdd835"
+            ></path>
+            <path
+              d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+              fill="#ffff8d"
+            ></path>
+            <path
+              d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+              fill="#f4b400"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="16"
+            height="16"
+            viewBox="0 0 128 128"
+            aria-hidden="true"
+            role="img"
+            class="star absolute translate-x-[50px] translate-y-[150px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <path
+              d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+              fill="#fdd835"
+            ></path>
+            <path
+              d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+              fill="#ffff8d"
+            ></path>
+            <path
+              d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+              fill="#f4b400"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="16"
+            height="16"
+            viewBox="0 0 128 128"
+            aria-hidden="true"
+            role="img"
+            class="star absolute translate-x-[150px] translate-y-[200px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <path
+              d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+              fill="#fdd835"
+            ></path>
+            <path
+              d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+              fill="#ffff8d"
+            ></path>
+            <path
+              d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+              fill="#f4b400"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="16"
+            height="16"
+            viewBox="0 0 128 128"
+            aria-hidden="true"
+            role="img"
+            class="star absolute translate-x-[300px] translate-y-[200px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <path
+              d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+              fill="#fdd835"
+            ></path>
+            <path
+              d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+              fill="#ffff8d"
+            ></path>
+            <path
+              d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+              fill="#f4b400"
+            ></path>
+          </svg>
+        </div>
+        <div class="flex w-full justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="16"
+            height="16"
+            viewBox="0 0 128 128"
+            aria-hidden="true"
+            role="img"
+            class="star absolute translate-x-[550px] translate-y-[180px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <path
+              d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+              fill="#fdd835"
+            ></path>
+            <path
+              d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+              fill="#ffff8d"
+            ></path>
+            <path
+              d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+              fill="#f4b400"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="16"
+            height="16"
+            viewBox="0 0 128 128"
+            aria-hidden="true"
+            role="img"
+            class="hover:star star absolute translate-x-[250px] translate-y-[200px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <path
+              d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+              fill="#fdd835"
+            ></path>
+            <path
+              d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+              fill="#ffff8d"
+            ></path>
+            <path
+              d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+              fill="#f4b400"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="16"
+            height="16"
+            viewBox="0 0 128 128"
+            aria-hidden="true"
+            role="img"
+            class="star absolute translate-x-[100px] translate-y-[100px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <path
+              d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+              fill="#fdd835"
+            ></path>
+            <path
+              d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+              fill="#ffff8d"
+            ></path>
+            <path
+              d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+              fill="#f4b400"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="16"
+            height="16"
+            viewBox="0 0 128 128"
+            aria-hidden="true"
+            role="img"
+            class="star absolute translate-x-[50px] translate-y-[200px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <path
+              d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+              fill="#fdd835"
+            ></path>
+            <path
+              d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+              fill="#ffff8d"
+            ></path>
+            <path
+              d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+              fill="#f4b400"
+            ></path>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="16"
+            height="16"
+            viewBox="0 0 128 128"
+            aria-hidden="true"
+            role="img"
+            class="star absolute translate-x-[500px] translate-y-[50px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <path
+              d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+              fill="#fdd835"
+            ></path>
+            <path
+              d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+              fill="#ffff8d"
+            ></path>
+            <path
+              d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+              fill="#f4b400"
+            ></path>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="16"
+              height="16"
+              viewBox="0 0 128 128"
+              aria-hidden="true"
+              role="img"
+              class="star absolute translate-x-[600px] translate-y-[50px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <path
+                d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+                fill="#fdd835"
+              ></path>
+              <path
+                d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+                fill="#ffff8d"
+              ></path>
+              <path
+                d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+                fill="#f4b400"
+              ></path>
+            </svg>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="16"
+            height="16"
+            viewBox="0 0 128 128"
+            aria-hidden="true"
+            role="img"
+            class="star absolute translate-x-[300px] translate-y-[90px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <path
+              d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+              fill="#fdd835"
+            ></path>
+            <path
+              d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+              fill="#ffff8d"
+            ></path>
+            <path
+              d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+              fill="#f4b400"
+            ></path>
+          </svg>
+        </div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="16"
+          height="16"
+          viewBox="0 0 128 128"
+          aria-hidden="true"
+          role="img"
+          class="star absolute translate-x-[850px] translate-y-[150px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <path
+            d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+            fill="#fdd835"
+          ></path>
+          <path
+            d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+            fill="#ffff8d"
+          ></path>
+          <path
+            d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+            fill="#f4b400"
+          ></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="16"
+          height="16"
+          viewBox="0 0 128 128"
+          aria-hidden="true"
+          role="img"
+          class="star absolute translate-x-[1100px] translate-y-[180px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <path
+            d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+            fill="#fdd835"
+          ></path>
+          <path
+            d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+            fill="#ffff8d"
+          ></path>
+          <path
+            d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+            fill="#f4b400"
+          ></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="16"
+          height="16"
+          viewBox="0 0 128 128"
+          aria-hidden="true"
+          role="img"
+          class="star absolute translate-x-[1370px] translate-y-[100px] transform grayscale-[100%] transition-all duration-[700ms] group-hover:shadow-yellow-500 group-hover:grayscale-0"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <path
+            d="M68.05 7.23l13.46 30.7a7.047 7.047 0 0 0 5.82 4.19l32.79 2.94c3.71.54 5.19 5.09 2.5 7.71l-24.7 20.75c-2 1.68-2.91 4.32-2.36 6.87l7.18 33.61c.63 3.69-3.24 6.51-6.56 4.76L67.56 102a7.033 7.033 0 0 0-7.12 0l-28.62 16.75c-3.31 1.74-7.19-1.07-6.56-4.76l7.18-33.61c.54-2.55-.36-5.19-2.36-6.87L5.37 52.78c-2.68-2.61-1.2-7.17 2.5-7.71l32.79-2.94a7.047 7.047 0 0 0 5.82-4.19l13.46-30.7c1.67-3.36 6.45-3.36 8.11-.01z"
+            fill="#fdd835"
+          ></path>
+          <path
+            d="M67.07 39.77l-2.28-22.62c-.09-1.26-.35-3.42 1.67-3.42c1.6 0 2.47 3.33 2.47 3.33l6.84 18.16c2.58 6.91 1.52 9.28-.97 10.68c-2.86 1.6-7.08.35-7.73-6.13z"
+            fill="#ffff8d"
+          ></path>
+          <path
+            d="M95.28 71.51L114.9 56.2c.97-.81 2.72-2.1 1.32-3.57c-1.11-1.16-4.11.51-4.11.51l-17.17 6.71c-5.12 1.77-8.52 4.39-8.82 7.69c-.39 4.4 3.56 7.79 9.16 3.97z"
+            fill="#f4b400"
+          ></path>
+        </svg>
+      </div>
+      <div class="mx-auto flex items-stretch justify-around gap-2 px-5">
+        <div
+          class="footer-section teai flex h-32 flex-col justify-between hover:bg-transparent"
+        >
+          <h3
+            class="mb-4 border-b-2 border-white pb-1.5 text-center font-[popins] text-[18px] md:text-[24px] lg:text-[24px]"
+          >
+            Social Networks
+          </h3>
+          <ul class="list-none p-0">
+            <li class="teai my-2 flex items-center justify-center gap-1">
+              <a
+                href="#"
+                class="text-white/80 grayscale-[100%] transition duration-300 hover:text-white"
+              >
+              </a>
+              <a href="">Telegram</a>
+            </li>
+            <li class="teai my-2 flex items-center justify-center gap-1">
+              <a
+                href="#"
+                class="text-white/80 grayscale-[100%] transition duration-300 hover:text-white"
+              >
+              </a>
+              <a href="">Instagram</a>
+            </li>
+            <li class="teai my-2 flex items-center justify-center">
+              <a
+                href="#"
+                class="text-white/80 grayscale-[100%] transition duration-300 hover:text-white"
+              >
+              </a>
+              <a href="">Twitter</a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="footer-section servicei flex h-32 flex-col justify-between hover:bg-transparent"
+        >
+          <h3
+            class="mb-4 border-b-2 border-white pb-1.5 text-center font-[popins] text-[18px] md:text-[24px] lg:text-[24px]"
+          >
+            Customer Services
+          </h3>
+          <ul class="list-none p-0">
+            <li class="servicei my-2">
+              <a
+                href="#"
+                class="text-white/80 transition duration-300 hover:text-white"
+                >Contact Us</a
+              >
+            </li>
+            <li class="servicei my-2">
+              <a
+                href="#"
+                class="text-white/80 transition duration-300 hover:text-white"
+                >FAQ</a
+              >
+            </li>
+            <li class="servicei my-2">
+              <a
+                href="#"
+                class="text-white/80 transition duration-300 hover:text-white"
+                >Track Your Order</a
+              >
+            </li>
+            <li class="servicei my-2">
+              <a
+                href="#"
+                class="text-white/80 transition duration-300 hover:text-white"
+                >Feedback</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="footer-section newi flex h-32 flex-col justify-between hover:bg-transparent"
+        >
+          <h3
+            class="mb-4 border-b-2 border-white pb-1.5 text-center font-[popins] text-[18px] md:text-[24px] lg:text-[24px]"
+          >
+            Filimo Store
+          </h3>
+          <ul class="list-none p-0">
+            <li class="servicei my-2">
+              <a
+                href="#"
+                class="text-white/80 transition duration-300 hover:text-white"
+                >Contact Us</a
+              >
+            </li>
+            <li class="servicei my-2">
+              <a
+                href="#"
+                class="text-white/80 transition duration-300 hover:text-white"
+                >FAQ</a
+              >
+            </li>
+            <li class="servicei my-2">
+              <a
+                href="#"
+                class="text-white/80 transition duration-300 hover:text-white"
+                >Track Your Order</a
+              >
+            </li>
+            <li class="servicei my-2">
+              <a
+                href="#"
+                class="text-white/80 transition duration-300 hover:text-white"
+                >Feedback</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script  src="./script/script.js"></script>
+  <script  src="./script/main.js"></script>
+  <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+</html>

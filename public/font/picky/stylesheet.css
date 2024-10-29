@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Cinzel';
+    src: url('Cinzel-SemiBold.woff2') format('woff2'),
+        url('Cinzel-SemiBold.woff') format('woff'),
+        url('Cinzel-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
